@@ -1,0 +1,47 @@
+{
+    "name": "fer-07-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "init-project": "npm install && npm-run-all init:*",
+        "init:dirs": "mkdirp dist src/sass src/css src/vendor src/images src/js",
+        "init:files": "touch README.md src/index.html src/sass/style.scss src/js/script.js",
+        "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+        "init:gitignore:custom": "echo \"dist\" >> .gitignore",
+        "test": "npm-run-all test:*",
+        "test:html": "globstar nu-html-checker dist/*.html",
+        "test:js": "eslint src/js/",
+        "build": "npm-run-all build:* test",
+        "build:clean": "mkdirp dist && rm -r dist && mkdirp dist",
+        "build:copy": "copyfiles -a -u 1 -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" dist",
+        "build:sass": "node-sass --output-style compact -o dist/css src/sass",
+        "build-dev": "npm-run-all build-dev:sass",
+        "build-dev:sass": "node-sass --output-style expanded --source-map true -o dist/css src/sass",
+        "server": "json-server --port 3131 --no-cors --delay 250 --watch dist/db/app.json",
+        "watch": "npm-run-all build build-dev -p watch:* server",
+        "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\" --ignore \"dist/db/**/*\"",
+        "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
+        "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "json-server": "^0.16.3",
+        "node-sass": "^5.0.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.3",
+        "copyfiles": "^2.1.0",
+        "eslint": "^5.14.1",
+        "globstar": "^1.0.0",
+        "mkdirp": "^0.5.1",
+        "node-sass": "^5.0.0",
+        "npm-run-all": "^4.1.5",
+        "nu-html-checker": "^0.1.0",
+        "onchange": "^5.2.0",
+        "stylelint": "^9.10.1",
+        "stylelint-scss": "^3.5.4"
+    }
+}
