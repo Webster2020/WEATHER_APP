@@ -18,8 +18,7 @@
         "build:sass": "node-sass --output-style compact -o dist/css src/sass",
         "build-dev": "npm-run-all build-dev:sass",
         "build-dev:sass": "node-sass --output-style expanded --source-map true -o dist/css src/sass",
-        "server": "json-server --port 3131 --no-cors --delay 250 --watch dist/db/app.json",
-        "watch": "npm-run-all build build-dev -p watch:* server",
+        "watch": "npm-run-all build build-dev -p watch:*",
         "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\" --ignore \"dist/db/**/*\"",
         "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
         "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist"
@@ -28,7 +27,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "json-server": "^0.16.3",
         "node-sass": "^5.0.0"
     },
     "devDependencies": {
