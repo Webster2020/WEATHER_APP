@@ -1,32 +1,8 @@
-body {
-  background-color: black;
-  transition: 1.7s;
-  &:hover {
-    background-color: #fdffce;
-    transition: 0.4s;
-  }
-}
-
-main {
-  position: relative;
-  height: calc(100vh - 16px);
-  background-image: url(https://images.pexels.com/photos/1118869/pexels-photo-1118869.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.7;
-  transition: 1.5s;
-  &:hover {
-    opacity: 1;
-    transition: 0.3s;
-  }
-}
-
 nav {
   position: fixed;
   height: 100px;
   width: calc(100vw - 16px);
-  //border: 5px solid white;
+  z-index: 100;
 }
 
 .nav-wrapper {
@@ -62,39 +38,30 @@ nav {
   } 
 }
 
-.container {
+.home-page {
   position: absolute;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 100%;
-  top: calc(50% - 250px);
-  //border: 1px solid yellow;
+	top: 50%;
+	transform: translateY(-50%);
+  //border: 5px solid green;
 }
 
-.active {
-  display: flex !important;
-}
-
-.weather-widget-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 500px;
-  width: 80vw;
-  z-index: 200;
-  border: 5px solid green;
-  .weather-widget {
-    border: 5px solid white;
+//MEDIA
+@media (max-width: 767px) {
+  .home-page {
+    flex-direction: column;
+    top: 5%;
+		transform: translateY(0);
   }
 }
 
 .button-wrapper {
-  margin: 50px;
+  display: block;
+  margin: 25px;
   height: 250px;
   width: 250px;
   .coin-button {
@@ -372,14 +339,3 @@ nav {
 	}
 }
 
-//MEDIA
-
-@media (max-width: 767px) {
-  .container {
-    position: absolute;
-    flex-direction: column;
-    height: 90vh;
-    top: 4vh;
-    border: 1px solid yellow;
-  }
-}

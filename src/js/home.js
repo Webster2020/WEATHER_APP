@@ -6,8 +6,8 @@ import {domElement, classNames} from './settings.js';
 const coinButtons = domElement.home.coinButtons;
 const localWeatherTrigger = domElement.home.localWeatherTrigger;
 const backHomeButton = domElement.home.backHomeButton;
-const localWeatherPage = domElement.localWeather.localWeatherPage;
-const localWeatherWidget = domElement.localWeather.localWeatherWidget;
+const localWeatherPage = domElement.localWeather.page;
+const localWeatherWidget = domElement.localWeather.widget;
 
 export const initHomePage = () => {
   localWeatherTrigger.addEventListener('click', function(e) {

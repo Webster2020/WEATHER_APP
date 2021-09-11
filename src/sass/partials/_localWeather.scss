@@ -1,0 +1,39 @@
+.local-weather-page {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+	top: 50%;
+	transform: translateY(-50%);
+  //border: 5px solid lightcoral;
+}
+
+.local-weather-widget {
+  position: relative;
+  margin: 0;
+  top: 50%;
+	//transform: translateY(-50%);
+  //border: 5px solid blue;
+}
+
+.weather-wrapper {
+  display: block;
+}
+
+.weather-icon {
+  font-size: 100px;
+}
+
+.notification {
+  display: none;
+}
+
+.display-notification {
+  display: block;
+}
+
+.hide-weather {
+  display:none;
+}

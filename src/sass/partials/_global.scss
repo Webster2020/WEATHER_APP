@@ -1,3 +1,35 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
+body {
+  background-color: black;
+  transition: 1.7s;
+  &:hover {
+    background-color: #fdffce;
+    transition: 0.4s;
+  }
+}
+
+main {
+  position: relative;
+  height: calc(100vh - 16px);
+  background-image: url(https://images.pexels.com/photos/1118869/pexels-photo-1118869.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+  transition: 1.5s;
+  &:hover {
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.active {
+  display: flex !important;
+}
