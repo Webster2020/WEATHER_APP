@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import {domElement, classNames} from './settings.js';
 
@@ -21,21 +21,21 @@ export const initLocalWeather = () => {
     wrapperDom.classList.contains(classNames.localWeather.hideWeather) && wrapperDom.classList.remove(classNames.localWeather.hideWeather);
     notificationDom.classList.contains(classNames.localWeather.displayNotification) && notificationDom.classList.remove(classNames.localWeather.displayNotification);
     getWeather(latitude, longitude);
-  }
+  };
   
-  const showError = (error) => {
+  const showError = () => {
     notificationDom.classList.add(classNames.localWeather.displayNotification);
     wrapperDom.classList.add(classNames.localWeather.hideWeather);
     //notificationDom.style.display = 'block';
     notificationDom.innerHTML = '<p>BROWSER DOESN`T SUPPORT LOCALIZATION.</p>';
-  }
+  };
   
   if('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
   } else {
     notificationDom.style.display = 'block';
     notificationDom.innerHTML = '<p>BROWSER DOESN`T SUPPORT LOCALIZATION.</p>';
-  };
+  }
   
   setInterval(() => { 
     if('geolocation' in navigator) {
@@ -43,7 +43,7 @@ export const initLocalWeather = () => {
     } else {
       notificationDom.style.display = 'block';
       notificationDom.innerHTML = '<p>BROWSER DOESN`T SUPPORT LOCALIZATION.</p>';
-    };
+    }
   }, 5000);
   
   //OPEN WEATHER API
@@ -52,7 +52,7 @@ export const initLocalWeather = () => {
       KELVIN: 273,
       key: 'e69d6b961979bddc93a99fcc917017b3',
     }
-  }
+  };
   
   //EMPTY WEATHER OBJ
   const weather = {};
@@ -63,7 +63,7 @@ export const initLocalWeather = () => {
     
     fetch(apiEndPoint, {
       mode: 'cors', //no-cors, *cors, same-origin
-      })
+    })
       .then(function(response) {
         const data = response.json();
         return data;
@@ -83,7 +83,7 @@ export const initLocalWeather = () => {
       .catch((error) => {
         console.error('Error:', error);
       });
-  }
+  };
   
   //SETTING CORRECT ICON
   const switchIcon = (iconId) => {  
@@ -135,7 +135,7 @@ export const initLocalWeather = () => {
       icon = '<i class="fas fa-cloud"></i>';
     }
     return icon;
-  }
+  };
   
   //SETTING DATA TO DOM
   const displayWeather = () => {
@@ -145,6 +145,6 @@ export const initLocalWeather = () => {
     windDom.innerHTML = `${weather.wind}m/s`;
     descDom.innerHTML = weather.description;
     locationDom.innerHTML = `${weather.city}, ${weather.country}`;
-  } 
+  }; 
 
-}
+};

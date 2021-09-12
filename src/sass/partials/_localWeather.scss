@@ -7,23 +7,72 @@
   align-items: center;
 	top: 50%;
 	transform: translateY(-50%);
-  //border: 5px solid lightcoral;
 }
 
 .local-weather-widget {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  padding: 10px 30px 30px;
   top: 50%;
-	//transform: translateY(-50%);
-  //border: 5px solid blue;
+  border: 10px solid $color-light;
+  border-radius: 30px;
+  font-family: $font-text;
+  color: $color-light;
 }
 
-.weather-wrapper {
-  display: block;
+.geotime-params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 3px solid $color-light;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  .main-params {
+    display: block;
+  }
+  .extra-params {
+    display: block;
+    margin-left: 20px;
+    width: 220px;
+    p {
+      display: inline-block;
+      margin: 0;
+      font-size: 20px;
+      line-height: 2;
+      font-weight: 600;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0;
+      font-size: 20px;
+      line-height: 2;
+    }
+  }
 }
 
 .weather-icon {
   font-size: 100px;
+}
+
+.temperature-value p {
+  margin: 0;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.weather-wrapper {
+  display: block;
 }
 
 .notification {
@@ -36,4 +85,28 @@
 
 .hide-weather {
   display:none;
+}
+
+//MEDIA
+@media (max-width: 576px) {
+  .local-weather-widget {
+    margin-top: 30px;
+    padding: 10px 20px 30px;
+  }
+  .geotime-params {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    .main-params {
+      display: block;
+      margin: 0 auto;
+    }
+    .extra-params {
+      margin-top: 25px;
+      margin-left: 0;
+      border-top: 3px solid $color-light;
+    }
+  }
 }

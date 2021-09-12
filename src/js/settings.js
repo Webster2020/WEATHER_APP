@@ -14,10 +14,11 @@ export const select = {
     pres: '.local-weather-widget .pressure-value p',
     wind: '.local-weather-widget .wind-speed-value p',
     desc: '.local-weather-widget .temperature-description p',
-    location: '.local-weather-widget .location p'
+    location: '.local-weather-widget .location p',
+    currentTime: '.local-weather-widget .current-time p'
   },
   chartsWeather: {}
-}
+};
 
 export const domElement = {
   home: {
@@ -35,10 +36,11 @@ export const domElement = {
     pres: document.querySelector(select.localWeather.pres),
     wind: document.querySelector(select.localWeather.wind),
     desc: document.querySelector(select.localWeather.desc),
-    location: document.querySelector(select.localWeather.location)
+    location: document.querySelector(select.localWeather.location),
+    currentTime: document.querySelector(select.localWeather.currentTime)
   },
   chartsWeather: {}
-}
+};
 
 export const classNames = {
   home: {

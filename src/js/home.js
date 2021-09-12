@@ -19,8 +19,8 @@ export const initHomePage = () => {
       button.classList.add(classNames.home.elemGoAway);
       button.classList.add(classNames.home.elemHide);
     }  
-    backHomeButton.classList.add(classNames.home.elemGoBack)
-    backHomeButton.classList.add(classNames.home.elemShow)
+    backHomeButton.classList.add(classNames.home.elemGoBack);
+    backHomeButton.classList.add(classNames.home.elemShow);
   
     localWeatherPage.classList.add(classNames.home.pageActive);
   
@@ -50,4 +50,4 @@ export const initHomePage = () => {
     backHomeButton.classList.add(classNames.home.elemGoAway);
     backHomeButton.classList.add(classNames.home.elemHide);
   });
-}
+};
