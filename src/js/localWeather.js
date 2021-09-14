@@ -11,6 +11,7 @@ const presDom = domElement.localWeather.pres;
 const windDom = domElement.localWeather.wind;
 const descDom = domElement.localWeather.desc;
 const locationDom = domElement.localWeather.location;
+const currentTimeDom = domElement.localWeather.currentTime;
 
 export const initLocalWeather = () => {
   
@@ -26,7 +27,6 @@ export const initLocalWeather = () => {
   const showError = () => {
     notificationDom.classList.add(classNames.localWeather.displayNotification);
     wrapperDom.classList.add(classNames.localWeather.hideWeather);
-    //notificationDom.style.display = 'block';
     notificationDom.innerHTML = '<p>BROWSER DOESN`T SUPPORT LOCALIZATION.</p>';
   };
   
@@ -44,7 +44,7 @@ export const initLocalWeather = () => {
       notificationDom.style.display = 'block';
       notificationDom.innerHTML = '<p>BROWSER DOESN`T SUPPORT LOCALIZATION.</p>';
     }
-  }, 5000);
+  }, 10000);
   
   //OPEN WEATHER API
   const api = {
@@ -145,6 +145,7 @@ export const initLocalWeather = () => {
     windDom.innerHTML = `${weather.wind}m/s`;
     descDom.innerHTML = weather.description;
     locationDom.innerHTML = `${weather.city}, ${weather.country}`;
+    currentTimeDom.innerHTML = new Date().toLocaleString();
   }; 
 
 };

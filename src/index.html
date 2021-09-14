@@ -73,7 +73,31 @@
           </div>
           
           <div class='button-content-reverse'>
-            <div class='form-wrapper'>FORM</div>
+            <div class='form-wrapper'>
+
+              <form class='select-cities'>
+                <div class='input-wrapper'>
+                  <input id='input-city' placeholder='etc.: London'></input>
+                  <a href='#' class='add-city-button'>ADD CITY</a>
+                </div>
+              </form>
+
+              <form class='select-cities'>
+                <div class='multiselect'>
+                  <div class="select-box">
+                    <div>CITIES</div>
+                    <div class="over-select"></div>
+                  </div>
+                  <div id="checkboxes">
+                    <label for="city" id="city-label">
+                      <input type="checkbox" id="city" class='single-city' value="City" disabled/>City
+                    </label>
+                  </div>
+                  <a href='#' class="get-cities-button">SHOW CHARTS</a>
+                </div>
+              </form>
+
+            </div>
           </div>
           
         </button>

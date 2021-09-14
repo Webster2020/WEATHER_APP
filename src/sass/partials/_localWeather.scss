@@ -30,7 +30,7 @@
   width: 100%;
   margin-bottom: 20px;
   border-bottom: 3px solid $color-light;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -43,7 +43,7 @@
   }
   .extra-params {
     display: block;
-    margin-left: 20px;
+    margin-left: 40px;
     width: 220px;
     p {
       display: inline-block;
@@ -77,6 +77,8 @@
 
 .notification {
   display: none;
+  padding: 15px 0 0;
+  font-size: 20px;
 }
 
 .display-notification {
@@ -95,6 +97,10 @@
   }
   .geotime-params {
     flex-direction: column;
+    margin-top: 10px;
+    .location, .current-time {
+      line-height: 0;
+    }
   }
   .row {
     flex-direction: column;
