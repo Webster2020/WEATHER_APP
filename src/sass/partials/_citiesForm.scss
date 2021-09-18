@@ -16,11 +16,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
-  height: 300px;
+  margin: 0;
+  padding: 20px;
   width: 300px;
   top: 0;
-  border: 2px dashed #717171;
+  border: 10px solid $color-light;
+  border-radius: 30px;
+  font-family: $font-text;
   text-align: center;
   z-index: 99;
 }
@@ -28,37 +30,70 @@
 .select-cities {
   display: flex;
   flex-direction: column;
-  border: 2px dashed dodgerblue;
 }
 
 .input-wrapper {
   display: flex;
-  flex-direction: column;
-  border: 4px solid lightcoral;
+  flex-direction: row;
 }
 
 #input-city {
+  padding: 5px;
   width: 100%;
-  border: 2px solid green;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  color: $color-light;
+  border: 2px solid $color-light;
+  background-color: inherit;
+  &::placeholder {
+    color: $color-dark;
+  }
+  &:hover {
+    border-color: $color-dark;
+    cursor: pointer;
+  }
 }
 
-.add-city-button, .show-charts-button {
+.select-cities button {
   width: 100%;
-  color: rgb(182, 0, 127);
+  border: 2px solid $color-light;
+  background-color: inherit;
+  color: $color-light;
   text-decoration: none;
-  border: 4px solid rgb(182, 0, 127);
+  &:hover {
+    background-color: $color-light;
+    border-color: $color-dark;
+    font-weight: 600;
+    color: $color-dark;
+    cursor: pointer;
+  }
+}
+
+.add-city-button  {
+  padding: 7px 0;
+}
+
+.show-charts-button {
+  padding: 7px 0;
 }
 
 .multiselect {
-  border: 4px solid red;
+  display: block;
 }
 
 .select-box {
   position: relative;
-  font-size: 20px;
-  border: 1px solid gray;
+  padding: 7px 0;
+  border: 2px solid $color-light;
+  font-size: 15px;
+  color: $color-light;
   &:hover {
-    background-color: silver;
+    background-color: $color-light;
+    border-color: $color-dark;
+    font-weight: 600;
+    color: $color-dark;
+    cursor: pointer;
   }
 }
 
@@ -72,16 +107,23 @@
 
 #checkboxes {
   display: none;
-  border: 1px solid gray;
-  border-top: 1px solid transparent;
+  border: 2px solid $color-light;
+  //border-top: 1px solid transparent;
   overflow-y: scroll;
   max-height: 100px;
 }
 
 #checkboxes label {
   display: block;
+  padding: 5px;
   text-align: start;
   font-size: 15px;
+  color: $color-light;
+}
+
+#checkboxes input {
+  margin: 0 5px 0 0;
+  width: 25px;
 }
 
 #checkboxes #city-label {
@@ -89,7 +131,8 @@
 }
 
 #checkboxes label:hover {
-  background-color: silver;
+  background-color: $color-light;
+  color: $color-dark;
 }
 
 // .take-value-button {
