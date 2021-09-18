@@ -2,7 +2,7 @@ nav {
   position: fixed;
   height: 100px;
   width: calc(100vw - 16px);
-  z-index: 100;
+  z-index: 200;
 }
 
 .nav-wrapper {
@@ -141,20 +141,6 @@ nav {
   
   .charts-button {
     position: relative;
-    &:focus {
-      transform: rotate3d(0, 1, 0, 180deg);
-      transition: 1s;
-      .button-content {
-        opacity: 0;
-        transition: 0.5s;
-      }
-      .button-content-reverse {
-        transform: rotate3d(0, 1, 0, -180deg);
-        opacity: 1;
-        transition: 1s;
-        transition-delay: 0.1s;
-      }
-    }
     .button-content {
       position: relative;
       height: 100%;
@@ -202,25 +188,6 @@ nav {
         top: 120px;
         left: 170px;
         animation: 1s linear col-4 infinite;
-      }
-    }
-    .button-content-reverse {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 50%;
-      opacity: 0;
-      transition: 0.5s;
-      .form-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin: 50px auto;
-        height: 150px;
-        width: 150px;
-        border: 2px dashed #717171;
-        text-align: center;
       }
     }
   }

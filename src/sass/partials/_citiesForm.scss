@@ -1,3 +1,30 @@
+.cities-form-page {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+  z-index: 100;
+}
+
+.cities-form-widget {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  height: 300px;
+  width: 300px;
+  top: 0;
+  border: 2px dashed #717171;
+  text-align: center;
+  z-index: 99;
+}
+
 .select-cities {
   display: flex;
   flex-direction: column;
@@ -15,7 +42,7 @@
   border: 2px solid green;
 }
 
-.add-city-button, .get-cities-button {
+.add-city-button, .show-charts-button {
   width: 100%;
   color: rgb(182, 0, 127);
   text-decoration: none;

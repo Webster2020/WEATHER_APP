@@ -2,6 +2,7 @@ export const select = {
   home: {
     coinButtons: '.coin-button',
     localWeatherTrigger: '.button-wrapper .weather-button',
+    citiesFormTrigger: '.button-wrapper .charts-button',
     backHomeButton: '.nav-button-home'
   },
   localWeather: {
@@ -17,6 +18,17 @@ export const select = {
     location: '.local-weather-widget .location p',
     currentTime: '.local-weather-widget .current-time p'
   },
+  citiesForm: {
+    page: '.cities-form-page',
+    widget: '.cities-form-widget',
+    input: '#input-city',
+    checkboxesWrapper: '#checkboxes',
+    checkboxes: '#checkboxes input[type=checkbox]',
+    firstCheckbox: '#checkboxes label:first-child',
+    selectBox: '.cities-form-widget .select-box',
+    addCityButton: '.cities-form-widget .add-city-button',
+    showChartsButton: '.cities-form-widget .show-charts-button'
+  },
   chartsWeather: {}
 };
 
@@ -24,6 +36,7 @@ export const domElement = {
   home: {
     coinButtons: document.querySelectorAll(select.home.coinButtons),
     localWeatherTrigger: document.querySelector(select.home.localWeatherTrigger),
+    citiesFormTrigger: document.querySelector(select.home.citiesFormTrigger),
     backHomeButton: document.querySelector(select.home.backHomeButton),
   },
   localWeather: {
@@ -38,6 +51,17 @@ export const domElement = {
     desc: document.querySelector(select.localWeather.desc),
     location: document.querySelector(select.localWeather.location),
     currentTime: document.querySelector(select.localWeather.currentTime)
+  },
+  citiesForm: {
+    page: document.querySelector(select.citiesForm.page),
+    widget: document.querySelector(select.citiesForm.widget),
+    input: document.querySelector(select.citiesForm.input),
+    checkboxesWrapper: document.querySelector(select.citiesForm.checkboxesWrapper),
+    checkboxes: document.querySelectorAll(select.citiesForm.checkboxes),
+    firstCheckbox: document.querySelector(select.citiesForm.firstCheckbox),
+    selectBox: document.querySelector(select.citiesForm.selectBox),
+    showChartsButton: document.querySelector(select.citiesForm.showChartsButton),
+    addCityButton: document.querySelector(select.citiesForm.addCityButton),
   },
   chartsWeather: {}
 };

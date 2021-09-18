@@ -49,6 +49,34 @@
 
     </section>
     
+    <section class='container cities-form-page'>
+      <div class='cities-form-widget'>
+ 
+        <form class='select-cities'>
+          <div class='input-wrapper'>
+            <input id='input-city' placeholder='etc.: London'></input>
+            <div class='add-city-button'>ADD CITY</div>
+          </div>
+        </form>
+
+        <form class='select-cities'>
+          <div class='multiselect'>
+            <div class="select-box">
+              <div>CITIES</div>
+              <div class="over-select"></div>
+            </div>
+            <div id="checkboxes">
+              <label for="city" id="city-label">
+                <input type="checkbox" id="city" class='single-city' value="City" disabled/>City
+              </label>
+            </div>
+            <div class="show-charts-button">SHOW CHARTS</div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
     <section class='container home-page active'>
       
       <div class='button-wrapper'>
@@ -63,7 +91,6 @@
       
       <div class='button-wrapper'>
         <button class='coin-button charts-button'>
-          
           <div class='button-content'>
             <div class='chart-x-line'></div>
             <div class='chart-col col-1'></div>
@@ -71,35 +98,6 @@
             <div class='chart-col col-3'></div>
             <div class='chart-col col-4'></div>
           </div>
-          
-          <div class='button-content-reverse'>
-            <div class='form-wrapper'>
-
-              <form class='select-cities'>
-                <div class='input-wrapper'>
-                  <input id='input-city' placeholder='etc.: London'></input>
-                  <a href='#' class='add-city-button'>ADD CITY</a>
-                </div>
-              </form>
-
-              <form class='select-cities'>
-                <div class='multiselect'>
-                  <div class="select-box">
-                    <div>CITIES</div>
-                    <div class="over-select"></div>
-                  </div>
-                  <div id="checkboxes">
-                    <label for="city" id="city-label">
-                      <input type="checkbox" id="city" class='single-city' value="City" disabled/>City
-                    </label>
-                  </div>
-                  <a href='#' class="get-cities-button">SHOW CHARTS</a>
-                </div>
-              </form>
-
-            </div>
-          </div>
-          
         </button>
       </div>
       
