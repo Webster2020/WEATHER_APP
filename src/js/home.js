@@ -14,6 +14,9 @@ const localWeatherWidget = domElement.localWeather.widget;
 const citiesFormPage = domElement.citiesForm.page;
 const citiesFormWidget = domElement.citiesForm.widget;
 
+const chartsWeatherPage = domElement.chartsWeather.page;
+const chartsWeatherWidget = domElement.chartsWeather.widget;
+
 export const initHomePage = () => {
 
   localWeatherTrigger.addEventListener('click', function(e) {
@@ -63,19 +66,28 @@ export const initHomePage = () => {
     backHomeButton.classList.remove(classNames.home.elemGoAway);
     backHomeButton.classList.remove(classNames.home.elemShow);
   
-    localWeatherWidget.classList.remove(classNames.home.elemGoBack);localWeatherWidget.classList.remove(classNames.home.elemShow);
+    localWeatherWidget.classList.remove(classNames.home.elemGoBack);
+    localWeatherWidget.classList.remove(classNames.home.elemShow);
   
     localWeatherWidget.classList.add(classNames.home.elemGoAway);
     localWeatherWidget.classList.add(classNames.home.elemHide);
 
-    citiesFormWidget.classList.remove(classNames.home.elemGoBack);citiesFormWidget.classList.remove(classNames.home.elemShow);
+    citiesFormWidget.classList.remove(classNames.home.elemGoBack);
+    citiesFormWidget.classList.remove(classNames.home.elemShow);
   
     citiesFormWidget.classList.add(classNames.home.elemGoAway);
     citiesFormWidget.classList.add(classNames.home.elemHide);
+
+    chartsWeatherWidget.classList.remove(classNames.home.elemGoBack);
+    chartsWeatherWidget.classList.remove(classNames.home.elemShow);
+  
+    chartsWeatherWidget.classList.add(classNames.home.elemGoAway);
+    chartsWeatherWidget.classList.add(classNames.home.elemHide);
   
     setTimeout(function(){
       localWeatherPage.classList.remove(classNames.home.pageActive);
       citiesFormPage.classList.remove(classNames.home.pageActive); 
+      chartsWeatherPage.classList.remove(classNames.home.pageActive); 
     }, 500);
     backHomeButton.classList.add(classNames.home.elemGoAway);
     backHomeButton.classList.add(classNames.home.elemHide);

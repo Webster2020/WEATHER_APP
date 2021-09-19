@@ -1,14 +1,21 @@
 'use strict';
 
-import {domElement} from './settings.js';
+import {domElement, classNames} from './settings.js';
 
 //GET ELEMENTS
+const citiesFormPage = domElement.citiesForm.page;
+const citiesFormWidget = domElement.citiesForm.widget;
+
 const inputCityDom = domElement.citiesForm.input;
 const checkboxesWrapperDom = domElement.citiesForm.checkboxesWrapper;
 const firstCheckboxDom = domElement.citiesForm.firstCheckbox;
 const selectBoxDom = domElement.citiesForm.selectBox;
-const showChartsButtonDom = domElement.citiesForm.showChartsButton;
 const addCityButtonDom = domElement.citiesForm.addCityButton;
+
+const showChartsButtonDom = domElement.citiesForm.showChartsButton;
+
+const chartsWeatherPage = domElement.chartsWeather.page;
+const chartsWeatherWidget = domElement.chartsWeather.widget;
 
 //OPEN WEATHER API
 const api = {
@@ -38,7 +45,6 @@ export const initCitiesForm = () => {
         if (data.message) {
           alert(`We do not have weather info about "${city}".`);
         } else {
-          //const checkboxes = checkboxesDom;
           const checkboxes = document.querySelectorAll('#checkboxes input[type=checkbox]');
           let isAlreadyCity = false;
           console.log(isAlreadyCity);
@@ -101,6 +107,19 @@ export const initCitiesForm = () => {
     }
     console.log('AFTER');
     console.log(cities);
+
+    citiesFormWidget.classList.remove(classNames.home.elemGoBack);
+    citiesFormWidget.classList.remove(classNames.home.elemShow);
+
+    citiesFormWidget.classList.add(classNames.home.elemGoAway);
+    citiesFormWidget.classList.add(classNames.home.elemHide);
+    setTimeout(function(){
+      citiesFormPage.classList.remove(classNames.home.pageActive);
+    }, 500);
+    
+    chartsWeatherPage.classList.add(classNames.home.pageActive);
+    chartsWeatherWidget.classList.add(classNames.home.elemGoBack);
+    chartsWeatherWidget.classList.add(classNames.home.elemShow);
     //renderCharts(cities);
   });
   

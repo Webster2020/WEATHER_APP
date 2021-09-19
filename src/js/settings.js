@@ -29,7 +29,10 @@ export const select = {
     addCityButton: '.cities-form-widget .add-city-button',
     showChartsButton: '.cities-form-widget .show-charts-button'
   },
-  chartsWeather: {}
+  chartsWeather: {
+    page: '.charts-weather-page',
+    widget: '.charts-weather-widget'
+  }
 };
 
 export const domElement = {
@@ -63,7 +66,10 @@ export const domElement = {
     showChartsButton: document.querySelector(select.citiesForm.showChartsButton),
     addCityButton: document.querySelector(select.citiesForm.addCityButton),
   },
-  chartsWeather: {}
+  chartsWeather: {
+    page: document.querySelector(select.chartsWeather.page),
+    widget: document.querySelector(select.chartsWeather.widget)
+  }
 };
 
 export const classNames = {
