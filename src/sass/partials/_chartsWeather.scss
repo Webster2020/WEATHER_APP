@@ -15,14 +15,35 @@
 .charts-weather-widget {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   padding: 20px;
-  width: 300px;
   top: 0;
-  border: 10px solid $color-light;
-  border-radius: 30px;
   font-family: $font-text;
   text-align: center;
   z-index: 115;
+}
+
+.chart-container {
+  height: 350px;
+  width: 350px;
+  margin: 0 10px;
+  border: 10px solid $color-light;
+  border-radius: 30px;
+}
+
+.chart-wrapper {
+  padding: 10px;
+}
+
+//MEDIA
+@media (max-width: 768px) {
+  .charts-weather-widget {
+    flex-direction: column;
+  }
+  .chart-container {
+    height: 300px;
+    width: 300px;
+    margin: 20px 5px;
+  }
 }

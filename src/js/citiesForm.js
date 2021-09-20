@@ -1,6 +1,7 @@
 'use strict';
 
 import {domElement, classNames} from './settings.js';
+import { renderCharts } from './chartsWeather.js';
 
 //GET ELEMENTS
 const citiesFormPage = domElement.citiesForm.page;
@@ -120,7 +121,8 @@ export const initCitiesForm = () => {
     chartsWeatherPage.classList.add(classNames.home.pageActive);
     chartsWeatherWidget.classList.add(classNames.home.elemGoBack);
     chartsWeatherWidget.classList.add(classNames.home.elemShow);
-    //renderCharts(cities);
+
+    renderCharts(cities);
   });
   
   //ADD CITY

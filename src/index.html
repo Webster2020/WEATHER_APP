@@ -79,7 +79,19 @@
 
     <section class='container charts-weather-page'>
       <div class='charts-weather-widget'>
-        CHARTS WEATHER WIDGET
+
+        <div class='chart-container'>
+          <div class='chart-wrapper' id='temp-chart-wrapper'>
+            <canvas class='chart' id="tempChart"></canvas>
+          </div>
+        </div>
+        
+        <div class='chart-container'>
+          <div class='chart-wrapper' id='wind-chart-wrapper'>
+            <canvas class='chart' id="windChart"></canvas>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -109,6 +121,9 @@
       
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src='./js/app.js' type='module'></script>
+
 </body>
 </html>
