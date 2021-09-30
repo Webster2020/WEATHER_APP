@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT AWESOME ///NEW !!!-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <title>WEATHER APP</title>
+</head>
+<body>
+  <main>
+    
+    <nav>
+      <div class='nav-wrapper'>
+        <button class='nav-button-home'>
+          <i class="far fa-arrow-alt-circle-left"></i>
+        </button>
+      </div>
+    </nav>
+    
+    <section class='container local-weather-page'>
+
+      <div class='local-weather-widget'>
+        <!-- new one -->
+        <div class='notification'></div>
+
+        <div class='weather-wrapper'>
+          <div class='geotime-params'>
+            <div class='location'><p>-</p></div>
+            <div class='current-time'><p>-</p></div>
+          </div>
+
+          <div class='row'>
+            <div class='main-params'>
+              <div class='weather-icon'>ICON</div>
+              <div class='temperature-value'><p>-<sup>o</sup>C</p></div>
+            </div>
+            <div class='extra-params'>
+              <div class='pressure-value'><h3>pressure:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><p>-</p></div>
+              <div class='wind-speed-value'><h3>wind speed:&nbsp;&nbsp;</h3><p>-</p></div>
+              <div class='temperature-description'><h3>description:&nbsp;&nbsp;&nbsp;&nbsp;</h3><p>-</p></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    
+    <section class='container cities-form-page'>
+      <div class='cities-form-widget'>
+ 
+        <form class='select-cities'>
+          <div class='input-wrapper'>
+            <input id='input-city' placeholder='etc.: London'></input>
+            <button class='add-city-button'>ADD CITY</button>
+          </div>
+        </form>
+
+        <form class='select-cities'>
+          <div class='multiselect'>
+            <div class="select-box">
+              <div>CITIES</div>
+              <div class="over-select"></div>
+            </div>
+            <div id="checkboxes">
+              <label for="city" id="city-label">
+                <input type="checkbox" id="city" class='single-city' value="City" disabled/>City
+              </label>
+            </div>
+            <button class="show-charts-button">SHOW CHARTS</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <section class='container charts-weather-page'>
+      <div class='charts-weather-widget'>
+
+        <div class='chart-container'>
+          <div class='chart-wrapper' id='temp-chart-wrapper'>
+            <canvas class='chart' id="tempChart"></canvas>
+          </div>
+        </div>
+        
+        <div class='chart-container'>
+          <div class='chart-wrapper' id='wind-chart-wrapper'>
+            <canvas class='chart' id="windChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class='container home-page active'>
+      
+      <div class='button-wrapper'>
+        <button class='coin-button weather-button'>
+          <div class='button-content'>
+            <i class="cloud-icon cloud-left fas fa-cloud"></i>
+            <i class="sun-icon fas fa-sun"></i> 
+            <i class="cloud-icon cloud-right fas fa-cloud"></i>
+          </div>
+        </button>
+      </div>
+      
+      <div class='button-wrapper'>
+        <button class='coin-button charts-button'>
+          <div class='button-content'>
+            <div class='chart-x-line'></div>
+            <div class='chart-col col-1'></div>
+            <div class='chart-col col-2'></div>
+            <div class='chart-col col-3'></div>
+            <div class='chart-col col-4'></div>
+          </div>
+        </button>
+      </div>
+      
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src='./js/app.js' type='module'></script>
+
+</body>
+</html>
