@@ -6,7 +6,7 @@ WEATHER APP is simple aplication to checking weather uses external API to fetch 
 ![](WEATHER_APP.gif)
 
 ## Link
-https://webster2020.github.io/WEATHER_APP/
+https://weatherapp.webster2020.com/
 
 ## Getting Started
 
